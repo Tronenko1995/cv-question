@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+.poll * {
+    margin: 0;
+    padding: 0;
+}
+.poll ul,ol {
+    list-style: none;
+}
+.poll a {
+    text-decoration: none;
+}

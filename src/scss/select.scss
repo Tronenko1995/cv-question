@@ -1,0 +1,89 @@
+@import 'colors';
+.poll {
+
+.select {
+    position: relative;
+    display: block;
+	width: 394px;
+	background: #FFFFFF;
+	border: 1px solid #DCDAE3;
+    border-radius: 4px;
+    font-family: Foundry Sterling;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #BCBAC2;
+    cursor: pointer;
+    user-select: none;
+
+    &.active {
+        color: $color3;
+    }
+
+    &:hover {
+        border: 1px solid $color2;
+    }
+    &.open {
+        border-top: 1px solid $color2;
+        border-left: 1px solid $color2;
+        border-right: 1px solid $color2;
+        border-bottom: 1px solid transparent;
+        border-radius: 4px 4px 0 0;
+
+        & .select__head::after {
+            transform: translateY(50%) rotate(180deg);
+        }
+        & .select__list {
+            display: block;
+        }
+    }
+    &__head {
+        width: 394px;
+        padding: 12px 20px;
+    
+        &::after {
+            width: 24px;
+            height: 24px;
+            background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDEzLjE3MkwxNi45NSA4LjIyMjA1TDE4LjM2NCA5LjYzNjA1TDEyIDE2TDUuNjM1OTkgOS42MzYwNUw3LjA0OTk5IDguMjIyMDVMMTIgMTMuMTcyWiIgZmlsbD0iI0YyOTk0QSIvPgo8L3N2Zz4K');
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 16px;
+            bottom: 50%;
+            transform: translateY(50%);
+            content: '';
+            display: block;
+            transition: .2s ease-in;
+        }
+    }
+    &__list {
+        width: 394px;
+        border-bottom: 1px solid $color2;
+        border-left: 1px solid $color2;
+        border-right: 1px solid $color2;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        right: 0;
+        background: #fff;
+        border-radius: 0px 0px 4px 4px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 2;
+    }
+    &__item {
+        width: 200px;
+        position: relative;
+        padding: 12px 20px;
+        cursor: pointer;
+        list-style-type: none;
+        color: #504C5D;
+
+        &:hover {
+            color: $color2
+        }
+    }
+}
+
+}

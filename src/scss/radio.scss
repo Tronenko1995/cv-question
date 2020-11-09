@@ -1,0 +1,56 @@
+@import 'colors';
+.poll {
+
+
+.radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked+label {
+        color: $color4;
+
+        &::before {
+            background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNiIgY3k9IjYiIHI9IjYiIGZpbGw9IiM2QzIwN0YiLz4KPC9zdmc+Cg==');
+            background-repeat: no-repeat;
+            background-size: 12px;
+            background-position: center;
+        }
+    }
+    
+    &__label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none; 
+        cursor: pointer;
+        font-family: Foundry Sterling;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;       
+        color: $color3;
+        margin-right: 38px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #DCDAE3;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        &:hover {
+            color: $color4;
+        }
+    }
+
+}
+
+
+}

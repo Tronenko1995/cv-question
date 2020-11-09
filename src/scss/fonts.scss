@@ -1,0 +1,57 @@
+// 100 normal    — Thin
+// 200 normal    — ExtraLight
+// 300 normal    — Light
+//Book	350
+// normal normal — Regular
+// 500 normal    — Medium
+// 600 normal    — SemiBold / Demi Bold
+// bold normal   — Bold
+// 800 normal    — ExtraBold
+// 900 normal    — Black
+// @font-face {
+// 	font-family: 'Roboto-Bold';
+// 	src: url('../fonts/FoundrySterlingOT3-Medium.otf') format('opentype');
+// }
+// @font-face {
+// 	font-family: 'Gilroy';
+// 	src: url('../fonts/Gilroy-SemiBold.ttf') format('truetype');
+// 	font-weight: 600;
+// 	font-style: normal;
+// }
+@font-face {
+	font-family: 'Foundry Sterling';
+	src: url('../fonts/FoundrySterlingOT3-Light.otf') format('opentype');
+	font-style: normal;
+	font-weight: 300;
+}
+@font-face {
+	font-family: 'Foundry Sterling';
+	src: url('../fonts/FoundrySterlingOT3-Book.otf') format('opentype');
+	font-style: normal;
+	font-weight: 350;//Book
+}
+@font-face {
+	font-family: 'Foundry Sterling';
+	src: url('../fonts/FoundrySterlingOT3-Medium.otf') format('opentype');
+	font-style: normal;
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'Foundry Sterling';
+	src: url('../fonts/FoundrySterlingOT3-Demi.otf') format('opentype');
+	font-style: normal;
+	font-weight: 600;//Demi
+}
+@font-face {
+	font-family: 'Foundry Sterling';
+	src: url('../fonts/FoundrySterlingOT3-Bold.otf') format('opentype');
+	font-style: normal;
+	font-weight: 700; //bold
+}
+@font-face {
+	font-family: 'Foundry Sterling';
+	src: url('../fonts/FoundrySterlingOT3-ExtraBold.otf') format('opentype');
+	font-style: normal;
+	font-weight: 800;
+}
+

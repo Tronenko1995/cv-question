@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница опроса</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div class="poll">
+
+<header class="header">
+    <div class="header__wrap">
+        <a href="#" class="header__logo">
+            <img src="img/logo.png" alt="" class="header__logo-img">
+        </a>
+        <p class="header__link">
+            <a class="header__link-text" href="https://coopervision.ru/">coopervision.ru</a>
+        </p>
+    </div>
+</header>
+
+<div class="main">
+    <div class="main__wrap">
+        <div class="main__top">
+            <div class="main__top-svg svg-ballot"></div>
+            <p class="main__top-title">Страница опроса</p>
+        </div>
+        <div class="main__question">
+            <div class="main__question-number">1</div>
+            <p class="main__question-text">Выберите оптику:</p>
+        </div>
+        <div class="main__for-select">
+            <p class="main__for-select-text">Вы запрашивали данные по следующим оптикам:</p>
+            <div class="main__for-select-select select">
+                <input class="select__input" type="hidden" name="">
+                <div class="select__head">Выберите оптику из списка</div>
+                <ul class="select__list">
+                    <li class="select__item">Название оптики 1</li>
+                    <li class="select__item">Название оптики 2</li>
+                    <li class="select__item">Название оптики 3</li>
+                    <li class="select__item">Название оптики 4</li>
+                    <li class="select__item">Название оптики 5</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main__for-select main__for-select-2">
+            <p class="main__for-select-text">Если вы не нашли запрашиваемую оптику в списке, выберите подходящую из списка оптик вашего города:</p>
+            <div class="main__for-select-select select">
+                <input class="select__input" type="hidden" name="">
+                <div class="select__head">Выберите оптику из списка</div>
+                <ul class="select__list">
+                    <li class="select__item">Название оптики 1</li>
+                    <li class="select__item">Название оптики 2</li>
+                    <li class="select__item">Название оптики 3</li>
+                    <li class="select__item">Название оптики 4</li>
+                    <li class="select__item">Название оптики 5</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main__question main__question-2">
+            <div class="main__question-number">2</div>
+            <p class="main__question-text">Оцените качество работы работы оптики по программе замедления близорукости «Яркое Будущее™» с линзами MiSight® 1 day по шкале от 1 до 5:</p>
+        </div>
+        <div class="main__radio">
+            <input type="radio" class="radio" name="grade" value="1" id="gr1">
+            <label for="gr1" class="radio__label">1</label>
+            <input type="radio" class="radio" name="grade" value="2" id="gr2">
+            <label for="gr2" class="radio__label">2</label>
+            <input type="radio" class="radio" name="grade" value="3" id="gr3">
+            <label for="gr3" class="radio__label">3</label>
+            <input type="radio" class="radio" name="grade" value="4" id="gr4">
+            <label for="gr4" class="radio__label">4</label>
+            <input type="radio" class="radio" name="grade" value="5" id="gr5">
+            <label for="gr5" class="radio__label">5</label>
+        </div>
+        <div class="main__question main__question-3">
+            <div class="main__question-number">3</div>
+            <p class="main__question-text">Что бы вы улучшили в работе оптики:</p>
+        </div>
+    </div>
+</div>
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+/* Открытие селекта */
+$('.select').on('click', function () {
+    $(this).toggleClass('open');
+});
+
+/* Смена текста и значения по клику на итем селекта + закрытие селекта */
+$('.select').on('click', '.select__item', function (e) {
+    e.stopPropagation();
+
+    const itemText = $(this).text();
+    const select = $(this).closest('.select');
+
+    $(select).find('.select__head').text(itemText);
+    $(select).find('.select__input').val(itemText);
+    $(select).addClass('active').removeClass('open');
+});
+
+/* Закрытие всех селектов при клике вне блока селектов */
+$(document).on('click', function (e) {
+    if ( !$('.select').is(e.target) && !$('.select').is(e.target) && $('.select').has(e.target).length === 0) {
+        $('.select').removeClass('open');
+    };
+});
+</script>
+</body>
+</html>
