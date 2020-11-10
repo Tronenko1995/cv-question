@@ -101,6 +101,20 @@
     }
     &__radio {
         margin-top: 40px;
+
+        &-2 {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__textarea {
+        resize: none;
+        outline: none;
+        background: #FFFFFF;
+        border: 1px solid #DCDAE3;
+        border-radius: 6px;
+        width: 585px;
+        height: 103px;
     }
 }
 
