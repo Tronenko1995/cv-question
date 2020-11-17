@@ -1,6 +1,3 @@
-//Название папки в OpenServer
-const domain = 'cv-question.loc';
-
 //Поключаем модули галпа
 const gulp = require('gulp');
 //const sourcemaps = require('gulp-sourcemaps');
@@ -10,7 +7,7 @@ const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const jsmin = require('gulp-uglify');
 const del = require('del');
-const server = require('browser-sync').create();
+const browserSync = require('browser-sync').create();
 const rename = require('gulp-rename');
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
@@ -28,7 +25,9 @@ const cssFiles = [
   './src/scss/select.scss',
   './src/scss/radio.scss',
   './src/scss/header.scss',
-  './src/scss/main.scss'
+  './src/scss/main.scss',
+  './src/scss/footer.scss',
+  './src/scss/thanks.scss'
 ]
 
 function styles() {
@@ -47,7 +46,7 @@ function styles() {
   	suffix: '.min'
   }))
 	.pipe(gulp.dest('./css'))
-	.pipe(server.stream());
+	.pipe(browserSync.stream());
 }
 
 
@@ -67,7 +66,7 @@ function scripts() {
   	suffix: '.min'
   }))
 	.pipe(gulp.dest('./js'))
-	.pipe(server.stream());
+	.pipe(browserSync.stream());
 }
 
 function libs() {
@@ -127,9 +126,13 @@ function clean() {
 
 
 function watch() {
-  server.init({
-        proxy: domain,
-        ghostMode: false
+  browserSync.init({
+    server: {
+      baseDir: "./",
+      ghostMode: false,
+      port: 3000,
+      notify: true
+    }
   });
   gulp.watch('./src/scss/**/*.scss', styles);
   gulp.watch('./src/js/**/*.js', scripts);
@@ -137,7 +140,7 @@ function watch() {
   gulp.watch("./src/img/**/*.{png,jpg,jpeg}", images)
   gulp.watch("./src/img/**/*.svg", sprite)
   gulp.watch('./src/libs/**/*.**', libs);
-  gulp.watch("./*.html").on('change', server.reload);
+  gulp.watch("./*.html").on('change', browserSync.reload);
 }
 
 gulp.task('clean', clean);

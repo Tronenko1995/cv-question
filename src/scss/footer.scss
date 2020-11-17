@@ -1,0 +1,73 @@
+@import 'colors';
+.poll {
+
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px #e6e6e6 solid;
+    background: #fff;
+    margin-bottom: 70px;
+
+    &:after {
+        margin-top: 15px;
+        height: 10px;
+        width: 100%;
+        display: block;
+        content: '';
+        background-size: 100%;
+        background: linear-gradient(to right,#155caa 0%,#2989d8 20%,#2b9f4a 40%,#f38025 60%,#e31a50 80%,#6b2a7e 100%);
+    }
+    &__wrap {
+        margin-top: 20px;
+        max-width: 950px;
+        padding: 0 20px;
+    }
+    &__text {
+        font-family: Foundry Sterling;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;        
+        color: $main;
+        text-align: center;
+    }
+    &__tel {
+        font-family: Foundry Sterling;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;        
+        color: $main;
+        margin-left: 10px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+        &:focus {
+            outline: none;
+            text-decoration: underline;
+        }
+    }
+    &__link {
+        font-family: Foundry Sterling;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: #005cab;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+        &:focus {
+            text-decoration: underline;
+            outline: none;
+        }
+    }
+}
+
+}
