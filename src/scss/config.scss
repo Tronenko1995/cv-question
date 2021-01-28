@@ -47,6 +47,44 @@ body {
         color: #fff;
     }
 }
+.msg-erorr {
+    margin-top: 20px !important;
+    color: #ff0000 !important;
+}
+
+.disabled {
+    &-radio {
+        color: #ddd !important;
+        cursor: default !important;
+        &::before {
+            border: 1px solid #ddd !important;
+            background: #ddd !important;
+        }
+    }
+    &-textarea {
+        background: #ddd !important;
+    }
+    &-question {
+        background: #ddd !important;
+    }
+    &-text {
+        color: #ddd !important;
+    }
+    &-select {
+        background: #ddd !important;
+        border: 1px solid #ddd !important;
+        cursor: default !important;
+        pointer-events: none !important;
+    }
+    &-head {
+        &::after {
+            background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDEzLjE3MkwxNi45NSA4LjIyMjA1TDE4LjM2NCA5LjYzNjA1TDEyIDE2TDUuNjM1OTkgOS42MzYwNUw3LjA0OTk5IDguMjIyMDVMMTIgMTMuMTcyWiIgZmlsbD0iI2NjY2NjYyIvPgo8L3N2Zz4K') !important;
+            background-repeat: no-repeat !important;
+        }
+    }
+}
+
+
 @media (max-width: 1360px) {
     .ruoverlay {
         &__text {

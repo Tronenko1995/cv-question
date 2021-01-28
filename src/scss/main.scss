@@ -29,6 +29,7 @@
             font-size: 32px;
             line-height: 45px;            
             color: $color3;
+            text-align: center;
         }
     }
     &__form {
@@ -62,7 +63,9 @@
         &-number {
             background: $color2;
             width: 24px;
+            min-width: 24px;
             height: 24px;
+            min-height: 24px;
             border-radius: 50%;
             font-family: Foundry Sterling;
             font-style: normal;
@@ -600,7 +603,7 @@
         //         display: flex;
         //         position: relative;
         //         padding-bottom: 16px;
-        justify-content: center;
+        justify-content: flex-start;
         margin-top: 50px;
         align-items: center;
         
@@ -677,13 +680,13 @@
         //         margin-top: 40px;
                 &-1 {
                     display: flex;
-                    justify-content: center;
+                    justify-content: flex-start;
                 }
         
                 &-2 {
         //             display: flex;
         //             flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
                     
                     .radio__label {
         //                 margin-bottom: 18px;
